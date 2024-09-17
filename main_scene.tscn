@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=4 uid="uid://bgnhgg12eefv3"]
+
+[ext_resource type="PackedScene" uid="uid://jmof4rm4ym5p" path="res://main_character.tscn" id="1_146vw"]
+[ext_resource type="Texture2D" uid="uid://crsnwxconvjxd" path="res://grassblock.jpg" id="2_xpwqj"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0ubau"]
+friction = 0.5
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qbtd6"]
+texture = ExtResource("2_xpwqj")
+0:0/size_in_atlas = Vector2i(50, 17)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-399.515, -135.765, 400.576, -136.118, 399.515, 135.411, -399.869, 135.057)
+
+[sub_resource type="TileSet" id="TileSet_aonmb"]
+physics_layer_0/collision_layer = 1
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_0ubau")
+sources/1 = SubResource("TileSetAtlasSource_qbtd6")
+
+[node name="MainScene" type="Node2D"]
+
+[node name="MainCharacter" parent="." instance=ExtResource("1_146vw")]
+position = Vector2(213, 217)
+scale = Vector2(0.36, 0.36)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+position = Vector2(398, 159)
+scale = Vector2(0.2, 0.2)
+tile_map_data = PackedByteArray("AAANAAEAAQAAAAAAAADBACQAAQAAAAAAAACCADsAAQAAAAAAAABQADsAAQAAAAAAAAAeADsAAQAAAAAAAADQ/y0AAQAAAAAAAACb/xgAAQAAAAAAAAB9AA4AAQAAAAAAAABFAAgAAQAAAAAAAAA=")
+tile_set = SubResource("TileSet_aonmb")
