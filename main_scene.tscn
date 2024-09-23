@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=4 uid="uid://bgnhgg12eefv3"]
+[gd_scene load_steps=7 format=4 uid="uid://bgnhgg12eefv3"]
 
 [ext_resource type="PackedScene" uid="uid://jmof4rm4ym5p" path="res://main_character.tscn" id="1_146vw"]
 [ext_resource type="Texture2D" uid="uid://crsnwxconvjxd" path="res://grassblock.jpg" id="2_xpwqj"]
+[ext_resource type="PackedScene" uid="uid://b7368cwfsmt6y" path="res://coin.tscn" id="3_f7yts"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0ubau"]
 friction = 0.5
@@ -28,3 +29,6 @@ position = Vector2(398, 159)
 scale = Vector2(0.2, 0.2)
 tile_map_data = PackedByteArray("AAANAAEAAQAAAAAAAADBACQAAQAAAAAAAACCADsAAQAAAAAAAABQADsAAQAAAAAAAAAeADsAAQAAAAAAAADQ/y0AAQAAAAAAAACb/xgAAQAAAAAAAAB9AA4AAQAAAAAAAABFAAgAAQAAAAAAAAA=")
 tile_set = SubResource("TileSet_aonmb")
+
+[node name="coin" parent="." instance=ExtResource("3_f7yts")]
+position = Vector2(506, 106)

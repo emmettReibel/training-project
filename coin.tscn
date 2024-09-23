@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7368cwfsmt6y"]
+
+[ext_resource type="Texture2D" uid="uid://dvgas8op6kjs0" path="res://Screenshot 2024-09-20 093039.png" id="1_m4yq5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ch8q7"]
+radius = 26.0192
+
+[node name="coin" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ch8q7")
+
+[node name="Screenshot2024-09-20093039" type="Sprite2D" parent="."]
+position = Vector2(-1, 1)
+scale = Vector2(0.15035, 0.15035)
+texture = ExtResource("1_m4yq5")
